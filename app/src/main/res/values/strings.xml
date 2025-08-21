@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Kaewfa Coffee</string>
+    <string name="loginbutton">loginButton</string>
+    <string name="get_started">Get started</string>
+    <string name="kaewfa_coffee">Kaewfa Coffee</string>
+    <string name="kaewfa">kaewfa</string>
+</resources>
