@@ -14,7 +14,6 @@ class createaccount : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_createaccount)
 
-        // ใช้ id ของ ScrollView ตาม XML คือ "create"
         val rootView = findViewById<androidx.constraintlayout.widget.ConstraintLayout>(R.id.create)
         ViewCompat.setOnApplyWindowInsetsListener(rootView) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -24,7 +23,7 @@ class createaccount : AppCompatActivity() {
 
         val btnBackLogin = findViewById<MaterialButton>(R.id.btngotoregister)
         btnBackLogin.setOnClickListener {
-            startActivity(Intent(this, Login::class.java))
+            startActivity(Intent(this, Login3::class.java))
             finish()
         }
     }
