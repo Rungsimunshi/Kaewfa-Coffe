@@ -4,4 +4,15 @@
     <string name="get_started">Get started</string>
     <string name="kaewfa_coffee">Kaewfa Coffee</string>
     <string name="kaewfa">kaewfa</string>
+    <string name="phone">phone</string>
+    <string name="email">email</string>
+    <string name="quickly_create_account">quickly_create_account</string>
+    <string name="create_acccout">create_acccout</string>
+    <string name="welcome">welcome</string>
+    <string name="password">password</string>
+    <string name="sign_up">sign_up</string>
+    <string name="already_have_an_account">already_have_an_account</string>
+    <string name="login2222">login2222</string>
+    <string name="create_account">create_account</string>
+    <string name="login">login</string>
 </resources>

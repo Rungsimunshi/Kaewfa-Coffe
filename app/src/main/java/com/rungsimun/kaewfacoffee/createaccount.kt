@@ -2,32 +2,30 @@ package com.rungsimun.kaewfacoffee
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.google.android.material.button.MaterialButton
 
-class Login : AppCompatActivity() {
+class createaccount : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_login)
+        setContentView(R.layout.activity_createaccount)
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+        // ใช้ id ของ ScrollView ตาม XML คือ "create"
+        val rootView = findViewById<androidx.constraintlayout.widget.ConstraintLayout>(R.id.create)
+        ViewCompat.setOnApplyWindowInsetsListener(rootView) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        val btnCreate = findViewById<Button>(R.id.btnCreate)
-        btnCreate.setOnClickListener {
-            startActivity(Intent(this, createaccount::class.java))
-        }
-
-        val btnLogin = findViewById<Button>(R.id.btnLogin)
-        btnLogin.setOnClickListener {
-            startActivity(Intent(this, Login3::class.java))
+        val btnBackLogin = findViewById<MaterialButton>(R.id.btngotoregister)
+        btnBackLogin.setOnClickListener {
+            startActivity(Intent(this, Login::class.java))
+            finish()
         }
     }
 }
