@@ -94,18 +94,35 @@
                 android:inputType="textEmailAddress"
                 android:padding="12dp" />
 
-            <EditText
-                android:id="@+id/etPassword"
+            <!-- Password Layout -->
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:background="@drawable/rounded_edittext_bg"
-                android:drawableStart="@drawable/icon_lock2"
-                android:drawableEnd="@drawable/ic_view"
-                android:drawablePadding="8dp"
-                android:hint="Password"
-                android:inputType="textPassword"
-                android:padding="12dp" />
+                android:layout_marginTop="16dp">
+
+                <EditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_edittext_bg"
+                    android:drawableStart="@drawable/icon_lock2"
+                    android:drawablePadding="8dp"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:padding="12dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_toStartOf="@+id/ivTogglePassword"/>
+
+                <ImageView
+                    android:id="@+id/ivTogglePassword"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_hide"
+                    android:contentDescription="Toggle Password Visibility"/>
+            </RelativeLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -132,6 +149,7 @@
                     android:layout_weight="1" />
 
                 <TextView
+                    android:id="@+id/tvForgotPassword"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Forgot password"
