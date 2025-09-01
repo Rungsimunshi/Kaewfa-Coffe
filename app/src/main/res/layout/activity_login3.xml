@@ -162,7 +162,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:layout_marginTop="24dp"
-                android:backgroundTint="#E68A40"
+                android:backgroundTint="#DB481F"
                 android:text="Log in"
                 android:textColor="@android:color/white" />
 

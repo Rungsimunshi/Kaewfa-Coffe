@@ -34,7 +34,10 @@ class Login3 : AppCompatActivity() {
 
         val btnLogin = findViewById<Button>(R.id.btnLogin)
         btnLogin.setOnClickListener {
-            startActivity(Intent(this, login2::class.java))
+            // โค้ดที่แก้ไข: เปลี่ยนเป้าหมายของ Intent ไปยัง Home1
+            val intent = Intent(this, Home1::class.java)
+            startActivity(intent)
+            finish() // ปิดหน้า Login3 เพื่อไม่ให้ผู้ใช้กดปุ่มย้อนกลับได้
         }
 
         val btnCreate = findViewById<Button>(R.id.btnCreate)
