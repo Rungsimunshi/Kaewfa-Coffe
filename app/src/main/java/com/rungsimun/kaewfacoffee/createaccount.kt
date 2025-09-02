@@ -28,6 +28,13 @@ class createaccount : AppCompatActivity() {
             insets
         }
 
+        // เพิ่มโค้ดสำหรับปุ่มย้อนกลับ (ivBackButton)
+        val ivBackButton = findViewById<ImageView>(R.id.ivBackButton)
+        ivBackButton.setOnClickListener {
+            startActivity(Intent(this, Login    ::class.java))
+            finish()
+        }
+
         // ปุ่มไปหน้า Login
         val btnBackLogin = findViewById<MaterialButton>(R.id.btngotoregister)
         btnBackLogin.setOnClickListener {

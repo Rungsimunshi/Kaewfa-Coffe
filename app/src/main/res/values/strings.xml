@@ -15,4 +15,10 @@
     <string name="login2222">login2222</string>
     <string name="create_account">create_account</string>
     <string name="login">login</string>
+    <string name="create_an_account">Create an account</string>
+    <string name="create_account2">Create account</string>
+    <string name="quickly_create_account2">Quickly create account</string>
+    <string name="already_have_an_account2">Already have an account ?</string>
+    <string name="Login">Login</string>
+    <string name="Sign_up">Sign up</string>
 </resources>
