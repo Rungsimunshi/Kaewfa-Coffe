@@ -7,20 +7,32 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class ProductAdapter(private val productList: ArrayList<Product>) :
-    RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() {
+class ProductAdapter(
+    private val productList: ArrayList<Product>,
+    private val listener: OnItemClickListener // เพิ่ม listener
+) : RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() {
 
-    class ProductViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    interface OnItemClickListener {
+        fun onItemClick(position: Int)
+    }
+
+    class ProductViewHolder(itemView: View, listener: OnItemClickListener) : RecyclerView.ViewHolder(itemView) {
         val productImage: ImageView = itemView.findViewById(R.id.product_image)
         val productName: TextView = itemView.findViewById(R.id.product_name)
-        val productDescription: TextView = itemView.findViewById(R.id.product_info) // แก้ไขตรงนี้ให้ตรงกับ item_product_card.xml
+        val productDescription: TextView = itemView.findViewById(R.id.product_info)
         val productPrice: TextView = itemView.findViewById(R.id.product_price)
+
+        init {
+            itemView.setOnClickListener {
+                listener.onItemClick(adapterPosition)
+            }
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.item_product_card, parent, false)
-        return ProductViewHolder(view)
+        return ProductViewHolder(view, listener)
     }
 
     override fun onBindViewHolder(holder: ProductViewHolder, position: Int) {
