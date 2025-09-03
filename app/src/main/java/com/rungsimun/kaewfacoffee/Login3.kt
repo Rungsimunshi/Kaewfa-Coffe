@@ -28,16 +28,14 @@ class Login3 : AppCompatActivity() {
 
         val btnBack = findViewById<ImageView>(R.id.btnBack)
         btnBack.setOnClickListener {
-            startActivity(Intent(this, Login::class.java))
             finish()
         }
 
         val btnLogin = findViewById<Button>(R.id.btnLogin)
         btnLogin.setOnClickListener {
-            // โค้ดที่แก้ไข: เปลี่ยนเป้าหมายของ Intent ไปยัง Home1
             val intent = Intent(this, Home1::class.java)
             startActivity(intent)
-            finish() // ปิดหน้า Login3 เพื่อไม่ให้ผู้ใช้กดปุ่มย้อนกลับได้
+            finish()
         }
 
         val btnCreate = findViewById<Button>(R.id.btnCreate)
@@ -52,15 +50,14 @@ class Login3 : AppCompatActivity() {
             if (isPasswordVisible) {
                 // ซ่อนรหัสผ่าน
                 etPassword.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
-                ivTogglePassword.setImageResource(R.drawable.ic_view) // ตาปิด
+                ivTogglePassword.setImageResource(R.drawable.ic_view) // ใช้ไอคอนมาตรฐาน
                 isPasswordVisible = false
             } else {
                 // แสดงรหัสผ่าน
                 etPassword.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
-                ivTogglePassword.setImageResource(R.drawable.ic_hide) // ตาเปิด
+                ivTogglePassword.setImageResource(R.drawable.ic_hide) // ใช้ไอคอนมาตรฐาน
                 isPasswordVisible = true
             }
-            // ให้ cursor อยู่ท้ายสุด
             etPassword.setSelection(etPassword.text.length)
         }
     }
