@@ -21,4 +21,16 @@
     <string name="already_have_an_account2">Already have an account ?</string>
     <string name="Login">Login</string>
     <string name="Sign_up">Sign up</string>
+    <string name="search_keywords">search_keywords</string>
+    <string name="notifications">notifications</string>
+    <string name="search_history">search_history</string>
+    <string name="clear">clear</string>
+    <string name="muwiflu">muwiflu</string>
+    <string name="muwich">muwich</string>
+    <string name="uapah">uapah</string>
+    <string name="fruits">fruits</string>
+    <string name="mujiflu">mujiflu</string>
+    <string name="milk_green_tea">milk_green_tea</string>
+    <string name="_55">_55</string>
+    <string name="scan_qr_code">scan_qr_code</string>
 </resources>
