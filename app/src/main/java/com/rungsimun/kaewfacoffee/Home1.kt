@@ -51,7 +51,7 @@ class Home1 : AppCompatActivity(), ProductAdapter.OnItemClickListener {
                     true
                 }
                 R.id.navigation_search -> {
-                    val intent = Intent(this, MainActivitySearch::class.java).apply {
+                    val intent = Intent(this, SearchActivity::class.java).apply {
                         flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
                     }
                     startActivity(intent)
@@ -74,15 +74,6 @@ class Home1 : AppCompatActivity(), ProductAdapter.OnItemClickListener {
                 }
                 else -> false
             }
-        }
-
-        // Listener สำหรับช่อง Search Bar ด้านบน
-        val searchBar = findViewById<EditText>(R.id.search_bar)
-        searchBar.setOnClickListener {
-            val intent = Intent(this, MainActivitySearch::class.java).apply {
-                flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
-            }
-            startActivity(intent)
         }
 
         // Listener สำหรับปุ่มกระดิ่ง
