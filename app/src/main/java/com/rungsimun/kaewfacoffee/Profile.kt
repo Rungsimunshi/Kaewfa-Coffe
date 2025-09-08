@@ -23,8 +23,9 @@ class ProfileActivity : AppCompatActivity() {
                     true
                 }
                 R.id.navigation_search -> {
-                    // Navigate to Search screen
+                    startActivity(Intent(this, SearchActivity::class.java))
                     true
+
                 }
                 R.id.navigation_history -> {
                     // Navigate to History screen
@@ -34,6 +35,7 @@ class ProfileActivity : AppCompatActivity() {
                     // You are already on this screen
                     true
                 }
+
                 else -> false
             }
         }

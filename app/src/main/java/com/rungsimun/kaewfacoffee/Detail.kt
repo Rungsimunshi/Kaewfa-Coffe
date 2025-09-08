@@ -36,6 +36,11 @@ class Detail : AppCompatActivity() {
                     startActivity(intent)
                     true
                 }
+                R.id.navigation_search -> {
+                    startActivity(Intent(this, SearchActivity::class.java))
+                    true
+
+                }
                 R.id.navigation_profile -> {
                     // Navigate to ProfileActivity
                     val intent = Intent(this, ProfileActivity::class.java)

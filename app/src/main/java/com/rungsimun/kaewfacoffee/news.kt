@@ -28,6 +28,12 @@ class NewsActivity : AppCompatActivity() {
                 R.id.navigation_profile -> {
                     startActivity(Intent(this, ProfileActivity::class.java))
                     true
+
+                }
+                R.id.navigation_search -> {
+                    startActivity(Intent(this, SearchActivity::class.java))
+                    true
+
                 }
                 R.id.navigation_search, R.id.navigation_history -> true
                 else -> false
