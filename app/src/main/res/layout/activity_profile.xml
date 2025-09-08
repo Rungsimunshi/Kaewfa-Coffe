@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F2C3A5"
+    android:background="@drawable/gradient_background"
     tools:context=".ProfileActivity">
 
     <androidx.core.widget.NestedScrollView
@@ -29,7 +29,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
-                android:src="@drawable/mingpoo"
+                android:src="@drawable/xlxl"
                 android:contentDescription="Profile picture"/>
 
             <ImageView
@@ -62,11 +62,7 @@
                 android:textSize="16sp"
                 android:textColor="#101010"/>
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="20dp"
-                android:background="#D3D3D3"/>
+
 
             <LinearLayout
                 android:id="@+id/about_me_layout"

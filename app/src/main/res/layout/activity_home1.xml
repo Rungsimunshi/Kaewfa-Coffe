@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F2C3A5"
+    android:background="@drawable/gradient_background"
     tools:context=".Home1">
 
     <androidx.core.widget.NestedScrollView
@@ -142,6 +142,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:text="Categories"
+                android:textColor="@color/black"
+
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintTop_toBottomOf="@id/promo_banner_card"
@@ -183,6 +185,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Coffee"
+                            android:textColor="@color/black"
                             android:textSize="14sp"
                             android:layout_marginTop="5dp"/>
                     </LinearLayout>
@@ -204,6 +207,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Main course"
+                            android:textColor="@color/black"
                             android:textSize="14sp"
                             android:layout_marginTop="5dp"/>
                     </LinearLayout>
@@ -225,6 +229,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Thai desserts"
+                            android:textColor="@color/black"
                             android:textSize="14sp"
                             android:layout_marginTop="5dp"/>
                     </LinearLayout>
@@ -246,6 +251,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="American desserts"
+                            android:textColor="@color/black"
                             android:textSize="14sp"
                             android:layout_marginTop="5dp"/>
                     </LinearLayout>
@@ -258,6 +264,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="35dp"
                 android:text="Featured products"
+                android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintTop_toBottomOf="@id/categories_scroll_view"

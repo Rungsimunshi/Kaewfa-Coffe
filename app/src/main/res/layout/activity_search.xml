@@ -5,8 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F2C3A5"
-    tools:context=".search">
+    android:background="@drawable/gradient_background"
+    tools:context=".Search">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
