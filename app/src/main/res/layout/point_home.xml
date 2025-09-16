@@ -1,218 +1,252 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFEDDB"
-    android:orientation="vertical"
-    android:paddingStart="16dp"
-    android:paddingTop="32dp"
-    android:paddingEnd="16dp"
     tools:context=".PointsActivity">
 
-    <TextView
-        android:id="@+id/textView_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Kaewfa ID 088-888-8888"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/textView_update"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:text="Update now"
-        android:textColor="@color/black"
-        android:textSize="14sp" />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView_points"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_marginTop="24dp"
-        app:cardBackgroundColor="@android:color/transparent"
-        app:cardCornerRadius="16dp">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingStart="16dp"
+        android:paddingTop="32dp"
+        android:paddingEnd="16dp">
 
-        <ImageView
+        <TextView
+            android:id="@+id/textView_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kaewfa ID 088-888-8888"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Update now"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView_points"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            android:src="@drawable/ponts"/>
+            android:layout_height="150dp"
+            android:layout_marginTop="24dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardCornerRadius="16dp">
 
-        <RelativeLayout
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ponts"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/textView_points_earned"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Points earned"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textView_points"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textView_points_earned"
+                    android:layout_marginTop="8dp"
+                    android:text="162"
+                    android:textColor="@color/white"
+                    android:textSize="48sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView_points_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/textView_points"
+                    android:layout_marginStart="8dp"
+                    android:layout_toEndOf="@id/textView_points"
+                    android:text="points"
+                    android:textColor="@color/white"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/button_exchange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:backgroundTint="#FFEDDB"
+                    android:text="Exchange"
+                    android:textColor="@color/black" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/textView_last_deposit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Last deposit"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="16dp">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            android:padding="8dp">
 
-            <TextView
-                android:id="@+id/textView_points_earned"
-                android:layout_width="wrap_content"
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Points earned"
-                android:textColor="@color/white"
-                android:textSize="16sp" />
+                android:paddingVertical="12dp">
 
-            <TextView
-                android:id="@+id/textView_points"
-                android:layout_width="wrap_content"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Today\n10:21 am"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="-10 pts"
+                    android:textColor="#FF0000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#000000" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/textView_points_earned"
-                android:layout_marginTop="8dp"
-                android:text="162"
-                android:textColor="@color/white"
-                android:textSize="48sp"
-                android:textStyle="bold" />
+                android:paddingVertical="12dp">
 
-            <TextView
-                android:id="@+id/textView_points_label"
-                android:layout_width="wrap_content"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yesterday\n8:38 am"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="+90 pts"
+                    android:textColor="#008000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#000000" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignBottom="@id/textView_points"
-                android:layout_marginStart="8dp"
-                android:layout_toEndOf="@id/textView_points"
-                android:text="points"
-                android:textColor="@color/white"
-                android:textSize="24sp" />
+                android:paddingVertical="12dp">
 
-            <Button
-                android:id="@+id/button_exchange"
-                android:layout_width="wrap_content"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="July 10\n7:03 am"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="+32 pts"
+                    android:textColor="#008000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#000000" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:backgroundTint="#FFEDDB"
-                android:text="Exchange"
-                android:textColor="@color/black" />
-        </RelativeLayout>
-    </androidx.cardview.widget.CardView>
+                android:paddingVertical="12dp">
 
-    <TextView
-        android:id="@+id/textView_last_deposit"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="July 9\n10:29 am"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="+87 pts"
+                    android:textColor="#008000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:backgroundTint="@android:color/white"
+        app:fabCradleMargin="10dp"
+        app:fabCradleRoundedCornerRadius="10dp"
+        app:fabAlignmentMode="center">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            app:itemIconTint="@color/bottom_nav_item_colors"
+            app:itemTextColor="@color/bottom_nav_item_colors"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/bottom_nav_menu" />
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Last deposit"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+        android:contentDescription="Scan QR code"
+        android:src="@drawable/ic_view"
+        app:backgroundTint="#000000"
+        app:layout_anchor="@id/bottomAppBar"
+        app:layout_anchorGravity="center"
+        app:tint="@color/white" />
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="16dp"
-    android:orientation="vertical"
-    android:background="@drawable/rounded_white_background"
-    android:padding="8dp">
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingVertical="12dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Today\n10:21 am"
-            android:textColor="@color/black"
-            android:textSize="16sp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:text="-10 pts"
-            android:textColor="#FF0000"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-    </RelativeLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#000000" />
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingVertical="12dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Yesterday\n8:38 am"
-            android:textColor="@color/black"
-            android:textSize="16sp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:text="+90 pts"
-            android:textColor="#008000"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-    </RelativeLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#000000" />
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingVertical="12dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="July 10\n7:03 am"
-            android:textColor="@color/black"
-            android:textSize="16sp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:text="+32 pts"
-            android:textColor="#008000"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-    </RelativeLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#000000" />
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingVertical="12dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="July 9\n10:29 am"
-            android:textColor="@color/black"
-            android:textSize="16sp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:text="+87 pts"
-            android:textColor="#008000"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-    </RelativeLayout>
-
-</LinearLayout>
-
-
-
-</LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

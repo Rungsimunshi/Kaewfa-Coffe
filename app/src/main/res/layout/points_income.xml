@@ -22,12 +22,12 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Back button"
             android:padding="8dp"
             android:src="@drawable/ic_back"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:contentDescription="Back button" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:layout_width="wrap_content"
