@@ -113,6 +113,7 @@
             android:padding="8dp">
 
             <RelativeLayout
+                android:id="@+id/Redpoint"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingVertical="12dp">
@@ -247,6 +248,7 @@
         app:backgroundTint="#000000"
         app:layout_anchor="@id/bottomAppBar"
         app:layout_anchorGravity="center"
+        android:layout_marginBottom="10dp"
         app:tint="@color/white" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

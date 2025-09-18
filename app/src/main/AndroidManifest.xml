@@ -48,6 +48,21 @@
         <activity
             android:name=".createaccount"
             android:exported="false" />
+        <activity
+            android:name=".PointsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GreenHistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RedHistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RedemptionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".uespoints"
+            android:exported="false" />
     </application>
 
 </manifest>

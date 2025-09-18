@@ -3,12 +3,9 @@ package com.rungsimun.kaewfacoffee
 import android.content.Intent
 import android.os.Bundle
 import android.widget.FrameLayout
-import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class SearchActivity : AppCompatActivity() {
 
@@ -19,6 +16,7 @@ class SearchActivity : AppCompatActivity() {
         // Find views by their IDs
         val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottomNavigationView)
         val notificationButton: FrameLayout = findViewById(R.id.notification_button)
+        val fabButton: FloatingActionButton = findViewById(R.id.fab)
 
         // Set the listener for when a menu item is selected
         bottomNavigationView.setOnItemSelectedListener { item ->
@@ -31,11 +29,17 @@ class SearchActivity : AppCompatActivity() {
                     true
                 }
                 R.id.navigation_search -> {
-                    // Current activity, no action needed
+                    // อยู่ในหน้านี้แล้ว ไม่ต้องทำอะไร
+                    true
+                }
+                R.id.navigation_history -> {
+                    val intent = Intent(this, PointsActivity::class.java).apply {
+                        flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
+                    }
+                    startActivity(intent)
                     true
                 }
                 R.id.navigation_profile -> {
-                    // Placeholder: Replace with your ProfileActivity
                     val intent = Intent(this, ProfileActivity::class.java).apply {
                         flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
                     }
@@ -46,7 +50,7 @@ class SearchActivity : AppCompatActivity() {
             }
         }
 
-        // Set the search icon as selected to match the UX
+        // ตั้งค่าให้ไอคอน Search ถูกไฮไลต์
         bottomNavigationView.selectedItemId = R.id.navigation_search
 
         // Listener for Notification Button
@@ -58,11 +62,12 @@ class SearchActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        // Apply window insets for full-screen mode
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+        // Listener for Floating Action Button
+        fabButton.setOnClickListener {
+            val intent = Intent(this, RedemptionActivity::class.java).apply {
+                flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
+            }
+            startActivity(intent)
         }
     }
 }

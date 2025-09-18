@@ -11,18 +11,19 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class Home1 : AppCompatActivity(), ProductAdapter.OnItemClickListener {
     private lateinit var productList: ArrayList<Product>
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    override fun onCreate(bundle: Bundle?) {
+        super.onCreate(bundle)
         enableEdgeToEdge()
         setContentView(R.layout.activity_home1)
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { view, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            view.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
@@ -43,7 +44,6 @@ class Home1 : AppCompatActivity(), ProductAdapter.OnItemClickListener {
         recyclerView.layoutManager = GridLayoutManager(this, 2)
         recyclerView.adapter = adapter
 
-        // Listener สำหรับ BottomNavigationView
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
         bottomNavigationView.setOnItemSelectedListener { item ->
             when(item.itemId) {
@@ -58,11 +58,10 @@ class Home1 : AppCompatActivity(), ProductAdapter.OnItemClickListener {
                     true
                 }
                 R.id.navigation_history -> {
-                    // หากมี HistoryActivity ให้เปลี่ยนเป็น:
-                    // val intent = Intent(this, HistoryActivity::class.java).apply {
-                    //     flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
-                    // }
-                    // startActivity(intent)
+                    val intent = Intent(this, PointsActivity::class.java).apply {
+                        flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
+                    }
+                    startActivity(intent)
                     true
                 }
                 R.id.navigation_profile -> {
@@ -76,10 +75,10 @@ class Home1 : AppCompatActivity(), ProductAdapter.OnItemClickListener {
             }
         }
 
-        // Listener สำหรับปุ่มกระดิ่ง
-        val notificationButton = findViewById<FrameLayout>(R.id.notification_button)
-        notificationButton.setOnClickListener {
-            val intent = Intent(this, NewsActivity::class.java).apply {
+        // ทำให้ปุ่ม QR code กดได้และเปลี่ยนไปหน้า RedemptionActivity
+        val fabButton = findViewById<FloatingActionButton>(R.id.fab)
+        fabButton.setOnClickListener {
+            val intent = Intent(this, RedemptionActivity::class.java).apply {
                 flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
             }
             startActivity(intent)
